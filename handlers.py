@@ -126,6 +126,33 @@ def init2(func, *args, **kwargs):
 		error = sys.exc_info()[1]
 		dbEntry(error)
 
+def verify_cell_highlight():
+	return "verify_cell_highlight was staged, no actual code was executed"
+
+def verify_channel_tune():
+	return "verify_channel_tune was staged, no actual code was executed"
+
+def routeVideo(sethost, setrack, setslotnum):
+	#rack = ["placeholder", 2, 8, 15, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104] 	
+	stbKey = setrack+setslotnum
+	stbPosition = {"A031": "32", "A032": "33", "A033":"34", "A034":"35",
+                       "A035": "36", "A036": "37", "A037":"38", "A038":"39"}
+
+#Starting position per rack by input number
+	sendhost = str(sethost-1) + " "+ str(stbPosition[stbKey])+"\n"
+	tn = telnetlib.Telnet("10.23.223.202", "9990")
+
+	tn.write("VIDEO OUTPUT ROUTING:\n")
+	tn.write(sendhost)
+	tn.write("\n")
+
+
+	print tn.read_until("ACK", 2)
+	#print tn.read_all()
+
+
+#hostvideoroute(sethost, setrack, setslotnum)
+#routeVideo(37,14,2)
 
 
 
