@@ -1,7 +1,7 @@
 # handlers_lib
 
 Description:
-Python Functions built to help in the connection of various devices and API's that help a python script communicate with those devices. These functions were originally built so that a web interface could connect to those devices and control them.
+Python Functions built to help in the connection and communication of various devices. These functions were originally built so that a web interface could connect to those devices and a user can user that web interface to control them.
 
 
 * ## Installation
