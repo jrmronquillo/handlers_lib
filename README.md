@@ -9,7 +9,7 @@ src/
   * /handlers_lib
   * /your_project
   
- 
+ Include the following line to import the library of python functions
  ```import handlers.py```
  
 
