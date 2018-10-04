@@ -19,5 +19,8 @@ src/
 ```import handlers.py```
 
 Example:
-``` def newFunction():
-      keyPress(A00, 'menu', '5')```
+``` 
+def newFunction():
+      keyPress(A00, 'menu', '5')
+      
+```
