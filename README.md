@@ -16,11 +16,14 @@ src/
   
 
 * ## Usage
-```import handlers.py```
+
 
 Example:
 ``` 
+import handlers.py
+
 def newFunction():
+      #keyPress function is defined in the imported handlers.py
       keyPress(A00, 'menu', '5')
       
 ```
